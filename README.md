@@ -1,36 +1,36 @@
 Steps: To access the student mentors API
 
-// To get the student list
+// To get the student list (GET)
 
       https://student-mentor-o635.onrender.com/
 
        --> Ex :  https://student-mentor-o635.onrender.com/api/student/
 
-// To get the mentor list
+// To get the mentor list (GET)
 
      https://student-mentor-o635.onrender.com/api/mentor/
 
      --> /* https://student-mentor-o635.onrender.com/api/mentor/ */ 
 
-// To create a student instance
+// To create a student instance (POST)
 
       https://student-mentor-o635.onrender.com/create
 
       --> Ex :  https://student-mentor-o635.onrender.com/api/student/create/
 
-// To create a mentor instance
+// To create a mentor instance (POST)
 
       https://student-mentor-o635.onrender.com/api/mentor/create
 
       --> /* https://student-mentor-o635.onrender.com/api/mentor/create */ 
 
-// To assign a mentor to a student
+// To assign a mentor to a student (POST)
 
       https://student-mentor-o635.onrender.com/api/student//mentors/:mentorId/students/:studentId
 
       --> Ex : https://student-mentor-o635.onrender.com/api/student/mentors/65c2948cb7d61aa8ff71a97a/students/65c7cad92f14807a3c94da91
 
-// To add multiple students to the mentor
+// To add multiple students to the mentor (POST)
 
 https://student-mentor-o635.onrender.com/api/student//mentors/:mentorId/studentIds
 
@@ -40,7 +40,7 @@ https://student-mentor-o635.onrender.com/api/student//mentors/:mentorId/studentI
        "studentIds" : ["65c7cad92f14807a3c94da91", "65c7caf92f14807a3c94da93"]
      }
    
-// To assign or change mentor for the student
+// To assign or change mentor for the student (PUT)
 
       https://student-mentor-o635.onrender.com/api/student//:studentId/mentors/:mentorId
 
@@ -50,13 +50,13 @@ https://student-mentor-o635.onrender.com/api/student//mentors/:mentorId/studentI
        "mentorId" : "65c786c8c59d02393bdc7db6"
      }
 
-// To get all the students on one mentor
+// To get all the students on one mentor (GET)
 
       https://student-mentor-o635.onrender.com/api/mentor/getStudents/mentor/:mentorId
 
       --> /* https://student-mentor-o635.onrender.com/api/mentor/getStudents/mentor/65c786c8c59d02393bdc7db6 */ 
 
-// Routes for getting previous mentor information
+// Routes for getting previous mentor information (GET)
 
       https://student-mentor-o635.onrender.com/api/student/students/:studentId/previous-mentor
 
