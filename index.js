@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const databaseConnection = require('./dbConfig');
 const { studentRouter } = require('./routes/student.routes');
 const { mentorRouter } = require('./routes/mentor.routes');
+require('dotenv').config();
 
 
 const app = express();
@@ -18,6 +19,6 @@ app.use(bodyParser.json());
 app.use('/api/student', studentRouter);
 app.use('/api/mentor', mentorRouter);
 
-app.listen(PORT, () => {
+app.listen(PORT, process.env.HOST_NAME, () => {
     console.log(`listening on port http://localhost:${PORT}`);
 });
