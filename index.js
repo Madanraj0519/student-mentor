@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const databaseConnection = require('./dbConfig');
 const { studentRouter } = require('./routes/student.routes');
 const { mentorRouter } = require('./routes/mentor.routes');
+const cors = require('cors');
 require('dotenv').config();
 
 
@@ -11,6 +12,8 @@ const PORT = 5000;
 
 databaseConnection();
 
+
+app.use(cors());
 
 app.use(bodyParser.json());
 
